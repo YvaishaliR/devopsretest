@@ -16,7 +16,7 @@ pipeline {
                     file: "lambda_function.zip",
                     bucket: 'devopsretest11112025'
                 )
-            }
+            
 
             sh '''
             aws lambda create-function \
@@ -25,7 +25,8 @@ pipeline {
             --role arn:aws:iam::439162045865:role/devopsretestrole \
             --handler lambda_function.lambda_handler \
             --code S3Bucket=devopsretest11112025,S3Key=lambda_function.zip '''
-        }
+        	}
+	}
     }
     }
 }
