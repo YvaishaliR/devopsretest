@@ -17,12 +17,7 @@ pipeline {
                     bucket: 'devopsretest11112025'
                 )
             }
-            # sh '''
-            #     aws lambda update-function-code \
-            #         --function-name solar-system-function \
-            #         --s3-bucket solar-system-lambda-bucket \
-            #         --s3-key solar-system-lambda-$BUILD_ID.zip
-            # '''
+
             sh '''
             aws lambda create-function \
             --function-name devopsretest \
