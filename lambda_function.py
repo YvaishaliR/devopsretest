@@ -35,7 +35,7 @@ def lambda_handler(event, context):
                     'dateofjoining': requestJSON['dateofjoining']
                     
                 })
-            body = 'Put item ' + requestJSON['id']
+            body = 'Put employee ' + requestJSON['id']
     except KeyError:
         statusCode = 400
         body = 'Unsupported route: ' + event['routeKey']
